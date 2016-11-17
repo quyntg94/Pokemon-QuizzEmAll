@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context="quyntg.vn.session21_quizzemall.SettingScreen">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:checked="true"
+        android:text="Sound Effects" />
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:checked="true"
+        android:text="Music"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="20dp"
+        android:text="GENERATION IN QUIZ"
+        android:textAlignment="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+        <TextView
+            android:text="GENERATION I"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:id="@+id/gen1"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/background_gen1"/>
+        <TextView
+            android:text="GENERATION II"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:id="@+id/gen2"
+            android:layout_toRightOf="@+id/gen1"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/background_gen2"/>
+        <TextView
+            android:text="GENERATION III"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:id="@+id/gen3"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/gen1"
+            android:background="@drawable/background_gen3"/>
+        <TextView
+            android:text="GENERATION IV"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:id="@+id/gen4"
+            android:layout_toRightOf="@+id/gen3"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/gen2"
+            android:background="@drawable/background_gen4"/>
+        <TextView
+            android:text="GENERATION V"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:id="@+id/gen5"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/gen3"
+            android:background="@drawable/background_gen5"/>
+        <TextView
+            android:text="GENERATION VI"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:id="@+id/gen6"
+            android:layout_toRightOf="@+id/gen5"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/gen4"
+            android:background="@drawable/background_gen6"/>
+    </RelativeLayout>
+</LinearLayout>
