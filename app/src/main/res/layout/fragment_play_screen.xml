@@ -1,93 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="#FFFF00"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_play"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFF00">
 
-    <ProgressBar
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:max="100"
-        style="?android:attr/progressBarStyleHorizontal"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textSize="60dp"
-            android:text="0"
-            android:textColor="#000000" />
-    </RelativeLayout>
-    <ImageView
-        android:layout_width="match_parent"
-        android:src="@drawable/maria"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:layout_margin="10dp"
-        android:background="@drawable/rectangle"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4">
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/iv_A"
-            android:text="Maria Ozawa"
-            android:onClick="onClick"
-            android:clickable="true"
-            android:padding="10dp"
-            android:textAlignment="center"
-            android:layout_width="160dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/oval"/>
-        <TextView
-            android:id="@+id/iv_B"
-            android:text="Yui Hatano"
-            android:onClick="onClick"
-            android:clickable="true"
-            android:padding="10dp"
-            android:textAlignment="center"
-            android:layout_toRightOf="@+id/iv_A"
-            android:layout_width="160dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/oval"/>
-        <TextView
-            android:id="@+id/iv_C"
-            android:text="Tsubomi"
-            android:onClick="onClick"
-            android:clickable="true"
-            android:padding="10dp"
-            android:textAlignment="center"
-            android:layout_width="160dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_below="@id/iv_A"
-            android:background="@drawable/oval"/>
-        <TextView
-            android:id="@+id/iv_D"
-            android:text="Anri Okita"
-            android:onClick="onClick"
-            android:clickable="true"
-            android:padding="10dp"
-            android:textAlignment="center"
-            android:layout_toRightOf="@+id/iv_C"
-            android:layout_width="160dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/iv_B"
-            android:background="@drawable/oval"/>
-    </RelativeLayout>
-</LinearLayout>
+            <ProgressBar
+                android:id="@+id/progress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="20dp"
+                android:progressDrawable="@drawable/progress_bar" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/tv_current_score"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="60dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="3"
+            android:background="@drawable/oval">
+
+            <TextView
+                android:id="@+id/tv_pkmname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_pkm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+            <RelativeLayout
+                android:id="@+id/A"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/oval"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/B"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@+id/A"
+                android:background="@drawable/oval"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/C"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/A"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/oval"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/D"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/B"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/C"
+                android:background="@drawable/oval"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

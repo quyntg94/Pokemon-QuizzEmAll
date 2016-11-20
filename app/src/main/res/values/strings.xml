@@ -1,6 +1,22 @@
 <resources>
-    <string name="app_name">Session21_QuizzEmAll</string>
+    <!-- Main -->
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Session21_QuizzEmAll</string>
+    <string name="copyright">Copyright @ Techkids 2016</string>
+
+    <!-- Play -->
+
+    <string name="name">Quiz\'em All!</string>
+    <string name="highscore">HIGHSCORE</string>
+
+    <!---  Setting -->
+    <string name="generation">GENERATION IN QUIZ</string>
+    <string name="sound_effects">Sound Effects</string>
+    <string name="music">Music</string>
+    <string name="gen_1">GENERATION I</string>
+    <string name="gen_2">GENERATION II</string>
+    <string name="gen_3">GENERATION III</string>
+    <string name="gen_4">GENERATION IV</string>
+    <string name="gen_5">GENERATION V</string>
+    <string name="gen_6">GENERATION VI</string>
 </resources>

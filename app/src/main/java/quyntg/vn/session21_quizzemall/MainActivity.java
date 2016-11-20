@@ -1,5 +1,6 @@
 package quyntg.vn.session21_quizzemall;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -8,25 +9,41 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView iv_play;
-    private ImageView iv_setting;
-    private TextView ivA;
-    private TextView ivB;
-    private TextView ivC;
-    private TextView ivD;
+    @BindView(R.id.iv_play)
+    ImageView iv_play;
+    @BindView(R.id.iv_setting)
+    ImageView iv_setting;
+    @BindView(R.id.tv_score)
+    TextView tv_score;
+    @BindView(R.id.tv_hscore)
+    TextView tv_hscore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        iv_play = (ImageView) findViewById(R.id.iv_play);
-        iv_setting = (ImageView) findViewById(R.id.iv_setting);
-        ivA = (TextView) findViewById(R.id.iv_A);
-        ivB = (TextView) findViewById(R.id.iv_B);
-        ivC = (TextView) findViewById(R.id.iv_C);
-        ivD = (TextView) findViewById(R.id.iv_D);
+        ButterKnife.bind(this);
+        setupUI();
+        setFont();
+        addListeners();
+
+    }
+
+    private void setupUI() {
+    }
+
+    private void setFont() {
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/StencilStd.ttf");
+        tv_score.setTypeface(typeface);
+        tv_hscore.setTypeface(typeface);
+    }
+
+    private void addListeners(){
         iv_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,26 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 changeFragment(new SettingScreen(), true, null);
             }
         });
-//        ivA.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//            }
-//        });
-//        ivB.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//            }
-//        });
-//        ivC.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//            }
-//        });
-//        ivD.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//            }
-//        });
     }
 
     public void changeFragment(Fragment fragment, boolean addToBackstack, String tag){
